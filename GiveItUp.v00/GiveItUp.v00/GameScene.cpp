@@ -24,6 +24,8 @@ void GameScene::Init() {
 		m_spriteBackground.setTexture(m_textureBackground);
 		m_spriteBackground.setScale(ScaleX, ScaleY);
 	}
+	
+
 }
 void GameScene::Render(RenderWindow &window) {
 	//Background
