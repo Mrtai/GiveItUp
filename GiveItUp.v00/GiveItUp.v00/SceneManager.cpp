@@ -11,8 +11,6 @@ SceneManager* SceneManager::GetInstance() {
 SceneManager::SceneManager()
 {
 }
-
-
 SceneManager::~SceneManager()
 {
 	if (m_pInstance != NULL)

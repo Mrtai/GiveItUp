@@ -1,6 +1,8 @@
 #pragma once
-class mc
+#include "GameObjectRender.h"
+class mc:public GameObjectRender
 {
+	void Update(float dt) override;
 public:
 	mc();
 	~mc();

@@ -157,6 +157,7 @@
     <ClInclude Include="GameObjectRender.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="mc.h" />
+    <ClInclude Include="Plate.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="stdafx.h" />
@@ -169,6 +170,7 @@
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="GiveItUp.v00.cpp" />
     <ClCompile Include="mc.cpp" />
+    <ClCompile Include="Plate.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="stdafx.cpp">
