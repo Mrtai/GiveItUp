@@ -16,11 +16,10 @@ void mc::Init() {
 	else {
 		m_spriteMC.setTexture(m_textureMC);
 		m_spriteMC.setScale(0.5, 0.5);
-		m_spriteMC.setPosition(50, 300);
+		m_spriteMC.setPosition(50, 350);
 	}
 }
 void mc::Update(float dt) {
-	
 }
 void mc::Render(RenderWindow &window){
 	window.draw(m_spriteMC);

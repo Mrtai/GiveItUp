@@ -33,11 +33,12 @@ void GameScene::Render(RenderWindow &window) {
 	//Background
 	
 	window.draw(m_spriteBackground);
-	player->Render(window);
+	
 	window.draw(pt->m_spritePlate);
 	for (size_t i = 0; i < m_vPlate.size(); i++) {
 		window.draw(m_vPlate[i].m_spritePlate);
 	}
+	player->Render(window);
 	
 }
 void GameScene::Update(float dt, E &e) {
@@ -83,7 +84,13 @@ void GameScene::Update(float dt, E &e) {
 	player->m_spriteMC.move(0.f, 150 * dt*dir);
 	if (m_fPlateSpawnTimer < 110)
 		m_fPlateSpawnTimer += 1.f * dt * dtMultiplier;
-
+	//player->m_spriteMC.
+	sf::Rect<float> size = player->m_spriteMC.getGlobalBounds();
+	//player->m_spriteMC.setOrigin(Vector2f(size.width / 2, size.height / 2));
+	player->m_spriteMC.setOrigin(144/2,142/2);
+	std::cout << size.width << endl;;
+	player->m_spriteMC.rotate(0.5);
+	//player->m_spriteMC.setRotation(player->m_spriteMC.getRotation() + 0.5);
 	//Plate spawn
 	if (m_fPlateSpawnTimer >= 110)
 	{
