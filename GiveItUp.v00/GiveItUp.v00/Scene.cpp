@@ -8,5 +8,5 @@ Scene::~Scene() {
 
 }
 void Scene::Init() {};
-void Scene::Update(float dt) {};
+void Scene::Update(float dt, E &e) {};
 void Scene::Render(RenderWindow &window) {};

@@ -10,7 +10,7 @@ public:
 	sf::Vector2u TextureSize;
 	sf::Vector2u WindowSize;
 	static SceneManager* GetInstance();
-	void Update(float deltime);
+	void Update(float deltime,E &e);
 	void Render(sf::RenderWindow &window);
 	void Init();
 	Scene* GetCurrentScene();
