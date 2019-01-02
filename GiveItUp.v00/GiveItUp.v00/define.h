@@ -16,7 +16,7 @@ using namespace std;
 #define SPEED	370
 #define TEXTURE_MC	"../resources/texture/MC.png"
 #define TEXTURE_COLUMM	"../resources/texture/dia.png"
-#define TEXTURE_BACKGROUND	"../resources/texture/bk1.jpg"
+#define TEXTURE_BACKGROUND	"../resources/texture/bk1.png"
 
 enum State
 {

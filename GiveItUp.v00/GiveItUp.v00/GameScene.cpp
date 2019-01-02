@@ -53,6 +53,7 @@ void GameScene::Update(float dt, E &e) {
 		cout << "press space" << endl;
 		e = NO;
 	}
+
 	//Player jump
 	//if (is_jump_up) {
 	//	player->m_spriteMC.move(0.f, -v*dt);
