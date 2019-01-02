@@ -25,7 +25,7 @@ void GameScene::Init() {
 		m_spriteBackground.setTexture(m_textureBackground);
 		m_spriteBackground.setScale(ScaleX, ScaleY);
 	}
-	player->Init(TEXTURE_MC, 50, 300);
+	player->Init();
 	pt = new Plate();
 
 }
@@ -40,10 +40,46 @@ void GameScene::Render(RenderWindow &window) {
 	}
 	
 }
-void GameScene::Update(float dt) {
-	float dtMultiplier = 50;
-	//player->Update(dt);
-	cout << m_fPlateSpawnTimer << endl;
+void GameScene::Update(float dt, E &e) {
+	float dtMultiplier = 64.5f;
+	if (e == MOUSE_LEFT) {
+		//player->Update(dt);
+		v = 100;
+		v2 = 100;
+		is_jump_up = true;
+		e = NO;
+	}
+	if (e == SPACE) {
+		cout << "press space" << endl;
+		e = NO;
+	}
+	//Player jump
+	//if (is_jump_up) {
+	//	player->m_spriteMC.move(0.f, -v*dt);
+	//	v -= 1;
+	//}
+	//if (player->m_spriteMC.getPosition().y <= 274)
+	//{
+	//	is_jump_up = false;
+	//	is_jump_down = true;
+	//}
+	//if (player->m_spriteMC.getPosition().y >= 300 || v2 <= 0) {
+	//	is_jump_down = false;
+	//}
+	//if (is_jump_down) {
+	//	player->m_spriteMC.move(0.f, v2*dt);
+	//	v2 = v2 - 1;
+	//}
+	//
+	////cout << player->m_spriteMC.getPosition().y << endl;
+	//cout << v2 << endl;
+	if (player->m_spriteMC.getPosition().y <= 200) {
+		dir = 1;
+	}
+	if (player->m_spriteMC.getPosition().y >= 300) {
+		dir = -1;
+	}
+	player->m_spriteMC.move(0.f, 150 * dt*dir);
 	if (m_fPlateSpawnTimer < 110)
 		m_fPlateSpawnTimer += 1.f * dt * dtMultiplier;
 

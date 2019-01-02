@@ -2,7 +2,6 @@
 //
 
 #include "stdafx.h"
-#include "define.h"
 #include "SceneManager.h"
 #include <Windows.h>
 
@@ -18,13 +17,27 @@ int main()
 
 	Clock clock;
 	Time elapsed;
+	E e1 = NO;
 	while (window.isOpen())
 	{
 		Event event;
 		while (window.pollEvent(event))
 		{
-			if (event.type == Event::Closed)
+			if (event.type == sf::Event::MouseButtonPressed)
+			{
+				if (event.mouseButton.button == sf::Mouse::Left) {
+					e1 = MOUSE_LEFT;
+				}
+			}
+			if (event.type == sf::Event::KeyPressed) {
+				if (event.key.code == sf::Keyboard::Space)
+				{
+					e1 = SPACE;
+				}
+			}
+			if (event.type == sf::Event::Closed)
 				window.close();
+			
 		}
 
 		elapsed = clock.getElapsedTime();
@@ -35,7 +48,7 @@ int main()
 		clock.restart();
 
 		// ================================ Update ================================ 
-		SceneManager::GetInstance()->Update(dt);
+		SceneManager::GetInstance()->Update(dt,e1);
 
 		// ================================ Draw ================================ 
 		window.clear();
@@ -44,32 +57,8 @@ int main()
 		window.display();
 
 	//==================================================
-	//srand(time(NULL));
-	//sf::RenderWindow window(sf::VideoMode(WINDOWS_W, WINDOWS_H), "GiveItUp");
-	//window.setFramerateLimit(200);
-	//SceneManager::GetInstance()->Init();
-	//DWORD start, end;
-	//DWORD deltatime;
-	//start = GetTickCount();
-	//while (window.isOpen())
-	//{
-	//	sf::Event event;
-	//	while (window.pollEvent(event))
-	//	{
-	//		if (event.type == sf::Event::Closed)
-	//			window.close();
-	//	}
-	//	end = GetTickCount();
-	//	deltatime = end - start;
-	//	//Update-------------------------------------------------------Update
-	//	SceneManager::GetInstance()->Update((float)deltatime / 1000.0f);
-	//	//Draw----------------------------------------------------------Draw
-	//	window.clear();
-	//	SceneManager::GetInstance()->Render(window);
-	//	//window.draw(m_spriteBackground);
-	//	window.display();
-	//	start = end;
 	}
+	
 
 	return 0;
 }

@@ -15,7 +15,7 @@ using namespace std;
 
 #define SPEED	370
 #define TEXTURE_MC	"../resources/texture/MC.png"
-#define TEXTURE_COLUMM	"../resources/texture/MC.png"
+#define TEXTURE_COLUMM	"../resources/texture/dia.png"
 #define TEXTURE_BACKGROUND	"../resources/texture/bk1.jpg"
 
 enum State
@@ -25,5 +25,11 @@ enum State
 	MENU,
 	GAMEPLAY,
 	GAMEOVER
+};
+enum E
+{
+	MOUSE_LEFT,
+	SPACE,
+	NO
 };
 

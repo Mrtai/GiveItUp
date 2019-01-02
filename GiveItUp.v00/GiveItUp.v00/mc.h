@@ -1,10 +1,15 @@
 #pragma once
-#include "GameObjectRender.h"
-class mc:public GameObjectRender
+#include "define.h"
+class mc
 {
-	void Update(float dt) override;
+private:
+	sf::Texture m_textureMC;
 public:
 	mc();
 	~mc();
+	void Init();
+	void Update(float dt);
+	void Render(RenderWindow &window);
+	sf::Sprite m_spriteMC;
 };
 

@@ -28,7 +28,7 @@ void SceneManager::Init() {
 void SceneManager::Render(sf::RenderWindow &window) {
 	m_sCurrentScene->Render(window);
 }
-void SceneManager::Update(float deltime) {
-	m_sCurrentScene->Update(deltime);
+void SceneManager::Update(float deltime,E &e) {
+	m_sCurrentScene->Update(deltime,e);
 }
 

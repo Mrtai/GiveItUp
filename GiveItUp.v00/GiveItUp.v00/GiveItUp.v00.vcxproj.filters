@@ -99,7 +99,7 @@
       <Filter>Manager</Filter>
     </ClCompile>
     <ClCompile Include="Plate.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Object</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

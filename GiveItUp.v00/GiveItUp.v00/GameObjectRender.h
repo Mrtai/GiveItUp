@@ -5,8 +5,7 @@ class GameObjectRender:public GameObject
 public:
 	void Init(const char * textureName, int x, int y )override;
 	void Render(sf::RenderWindow &window);
-	void Update(float dt);
-	sf::Sprite GetSprite();
+	virtual void Update(float dt);
 protected:
 	sf::Texture texture;
 	sf::Sprite sprite;

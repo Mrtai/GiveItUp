@@ -5,7 +5,7 @@ class Scene
 public:
 	Scene();
 	~Scene();
-	virtual void Update(float deltime);
+	virtual void Update(float deltime, E &e);
 	virtual void Render(sf::RenderWindow &window);
 	virtual void Init();
 protected:
