@@ -1,0 +1,6 @@
+﻿  MenuScene.cpp
+e:\congty\onedrive\make_game\giveitup\giveitup.v00\giveitup.v00\menuscene.cpp(38): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+e:\congty\onedrive\make_game\giveitup\giveitup.v00\giveitup.v00\menuscene.cpp(39): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+e:\congty\onedrive\make_game\giveitup\giveitup.v00\giveitup.v00\menuscene.cpp(40): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+  GiveItUp.v00.vcxproj -> E:\Congty\Onedrive\Make_game\Giveitup\GiveItUp.v00\Debug\GiveItUp.v00.exe
+  GiveItUp.v00.vcxproj -> E:\Congty\Onedrive\Make_game\Giveitup\GiveItUp.v00\Debug\GiveItUp.v00.pdb (Full PDB)
